@@ -1,0 +1,19 @@
+---
+title: "Matan Hakim"
+image: profile.jpg
+about:
+  template: jolla
+  links:
+    - icon: github
+      href: https://github.com/matanhakim
+    - icon: twitter
+      href: https://twitter.com/MatanHakim
+    - icon: mastodon
+      href: https://fosstodon.org/@matanhakim
+    - icon: envelope
+      href: mailto:matanhakim@gmail.com
+---
+
+Head of Research at the Israeli Institute for Cultural Policy.
+
+I lead projects in data science, research, analytics, and social and economic policy.
