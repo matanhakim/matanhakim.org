@@ -3,10 +3,14 @@ project:
 
 website:
   title: "Matan Hakim - Policy Data Scientist"
+  site-url: https://www.matanhakim.org
+  description: "Matan Hakim's personal website"
   navbar:
     right:
       - text: "About"
         file: index.qmd
+      - text: "Blog"
+        file: posts.qmd
       - text: "CV"
         file: cv.qmd
       - icon: github
