@@ -132,7 +132,7 @@ cat(x)
 cat(str_rtl(x))
 ```
 
-Notice how the dot ends up in the left side, where it should be. Additionally, since this blog post is ultimately rendered to HTML, the first time `cat(x)` is printed, it is all mixed-up backwards (meaning "tnirp" instead of "print", but in Hebrew). This problem doesn't exist when printing to the console, but it does when writing web-published code.
+Again, notice how the dot ends up in the left side, where it should be. Additionally, since this blog post is ultimately rendered to HTML, the first time `cat(x)` is printed, it is all mixed-up backwards (meaning "tnirp" instead of "print", but in Hebrew). This problem doesn't exist when printing to the console, but it does when writing web-published code.
 
 You can learn more on rtlr with printing `?str_rtl`, visiting its [pkgdown website](https://matanhakim.github.io/rtlr/), or browsing its [Github repository](https://github.com/matanhakim/rtlr).
 
