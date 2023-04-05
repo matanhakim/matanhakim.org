@@ -7,6 +7,8 @@ website:
   description: "Matan Hakim's personal website"
   image: profile.jpg
   favicon: profile.jpg
+  twitter-card: true
+  open-graph: true
   navbar:
     right:
       - text: "About"
