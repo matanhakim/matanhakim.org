@@ -5,6 +5,8 @@ website:
   title: "Matan Hakim - Policy Data Scientist"
   site-url: https://www.matanhakim.org
   description: "Matan Hakim's personal website"
+  image: profile.jpg
+  favicon: profile.jpg
   navbar:
     right:
       - text: "About"
