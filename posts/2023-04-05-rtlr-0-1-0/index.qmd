@@ -56,7 +56,7 @@ p +
   )
 ```
 
-The code script correctly presents `(2023)` to the left of the word `اسطوانات` (meaning "pistons"), but our plot malfunctions: it shows `(2023)` to the right of `اسطوانات`. This is a common problem in RTL languages, as R interpretes all code as written LTR. This problem is also present when ending a sentence with a punctuation mark, such as `.` or `,`.
+The code script correctly presents `(2023)` to the left of the word "اسطوانات" (meaning "pistons"), but our plot malfunctions: it shows `(2023)` to the right of "اسطوانات". This is a common problem in RTL languages, as R interpretes all code as written LTR. This problem is also present when ending a sentence with a punctuation mark, such as `.` or `,`.
 
 # rtlr - Solves Your RTL Problems
 
@@ -72,10 +72,11 @@ p +
   )
 ```
 
-**This solved our problem!** The year parentheses are located correctly on the left side. A solution to this problem without using rtlr would look something like
+**This solved our problem!** The year parentheses are located correctly on the left side. A solution to this problem without using rtlr would look something like:
 
-```
- x = paste0("\u202B", "اسطوانات (2023)")
+```{r}
+#| eval: false
+  x = paste0("\u202B", "اسطوانات (2023)")
 ```
 
 This solution has two drawbacks: having to remember the exact Unicode character adds to your cognitive load, and when having to print multiple lines with `\n` you have to paste `\u202B` again.[^3] Let's look at a common use case, where we want to add an informative caption to the plot, this time in Hebrew, but we have too much text for a single line:
