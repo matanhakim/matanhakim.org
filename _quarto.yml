@@ -20,6 +20,8 @@ website:
       - icon: mastodon
         href: https://fosstodon.org/@matanhakim
         rel: me
+      - icon: rss
+      href: posts.xml
 format:
   html:
     theme: cosmo
