@@ -20,7 +20,7 @@ If you have answered positively to any of these questions, this blog post is for
 
 # What is the Problem with Right-to-Left Languages?
 
-As coders and R professionals, the main tool in our toolbox is code. We write R code to solve problems, and this is what sets us apart from other professionals, such as analysts using some type of a [GUI](https://en.wikipedia.org/wiki/Graphical_user_interface) program. Nevertheless, code has a very clear postulate - it is written in English, and therefore it is written left-to-right (from now on: RTL, or LTR for "left-to-right"). For the most of us, this is an obvious choice, as English is the *lingua franca* of the programming world. But for a lot of us, There is a need to use data and communicate results in other languages. this problem becomes much more troublesome when using an RTL language.
+As coders and R professionals, the main tool in our toolbox is code. We write R code to solve problems, and this is what sets us apart from other professionals, such as analysts using some type of a [GUI](https://en.wikipedia.org/wiki/Graphical_user_interface) program. Nevertheless, code has a very clear postulate - it is written in English, and therefore it is written left-to-right (from now on: LTR, or RTL for "right-to-left"). For the most of us, this is an obvious choice, as English is the *lingua franca* of the programming world. But for a lot of us, There is a need to use data and communicate results in other languages. this problem becomes much more troublesome when using an RTL language.
 
 More than 2.3 billion people around the world are speaking a language that is written right-to-left.[^1] Such languages include, for example, Arabic, Persian, Hebrew, and Fulani. I am myself a native Hebrew speaker, and this is what brought me to write this package. **Code is not meant to be written right-to-left**, and some problems arise when doing so. Let's look at an example.
 
@@ -36,7 +36,7 @@ p <- ggplot(mtcars, aes(factor(cyl))) +
 p
 ```
 
-This is a very basic plot of the mtcars dataset, showing the number of cars with each number of pistons. Now, let's think about the scenario where communicate our analysis results to a non-English-speaking audience. Let's say our audience's native language is Arabic. Then, we should change the x-axis label:
+This is a very basic plot of the mtcars dataset, showing the number of cars with each number of pistons. Now, let's think about the scenario where we communicate our analysis results to a non-English-speaking audience. Let's say our audience's native language is Arabic. Then, we should change the x-axis label:
 
 ```{r}
 p +
@@ -56,11 +56,11 @@ p +
   )
 ```
 
-The code script correctly presents `(2023)` to the left of the word "اسطوانات" (meaning "pistons"), but our plot malfunctions: it shows `(2023)` to the right of "اسطوانات". This is a common problem in RTL languages, as R interpretes all code as written LTR. This problem is also present when ending a sentence with a punctuation mark, such as `.` or `,`.
+The code script correctly presents `(2023)` to the left of the word `اسطوانات` (meaning "pistons"), but our plot malfunctions: it shows `(2023)` to the right of `اسطوانات`. This is a common problem in RTL languages, as R interpretes all code as written LTR. This problem is also present when ending a sentence with a punctuation mark, such as `.` or `,`.
 
 # rtlr - Solves Your RTL Problems
 
-This is where rtlr steps in. its main (and currently only) function, `str_rtl()`, wraps strings with the Unicode character `\u202B`, which tells R to handle everything in that string that comes after this character to be handled as RTL.[^2] it does so as a wrapper around `stringr::str_c()`.
+This is where rtlr steps in. its main (and currently only) function, `str_rtl()`, wraps strings with the Unicode character `\u202B`, which tells R to handle everything in that string that comes after this character as RTL.[^2] it does so as a wrapper around `stringr::str_c()`.
 
 [^2]: For further reading on this, see: <https://unicode.org/reports/tr9/#Directional_Formatting_Characters>
 
@@ -72,7 +72,13 @@ p +
   )
 ```
 
-This solved our problem! The year parentheses are located correctly on the left side. A solution to this problem without using rtlr would look something like `x = paste0("\u202B", "اسطوانات (2023)")`. This solution has two drawbacks: having to remember the exact Unicode character adds to your cognitive load, and when having to print multiple lines with `\n` you have to paste `\u202B` again.[^3] Let's look at a common use case, where we want to add an informative caption to the plot, this time in Hebrew, but we have too much text for a single line:
+**This solved our problem!** The year parentheses are located correctly on the left side. A solution to this problem without using rtlr would look something like
+
+```
+ x = paste0("\u202B", "اسطوانات (2023)")
+```
+
+This solution has two drawbacks: having to remember the exact Unicode character adds to your cognitive load, and when having to print multiple lines with `\n` you have to paste `\u202B` again.[^3] Let's look at a common use case, where we want to add an informative caption to the plot, this time in Hebrew, but we have too much text for a single line:
 
 [^3]: This is because `\n` stops the RTL-embedding provided by `\u202B`, and forces you to write this as `\n\u202B` instead.
 
