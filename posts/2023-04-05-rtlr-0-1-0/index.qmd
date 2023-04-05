@@ -6,7 +6,7 @@ date: "2023-04-05"
 categories: 
   - news
   - code
-   -rtlr
+  - rtlr
 image: "image.png"
 ---
 

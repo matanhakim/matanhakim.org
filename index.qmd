@@ -12,6 +12,8 @@ about:
       href: https://fosstodon.org/@matanhakim
     - icon: envelope
       href: mailto:matanhakim@gmail.com
+    - icon: rss
+      href: index.xml
 ---
 
 Head of Research at the Israeli Institute for Cultural Policy.
