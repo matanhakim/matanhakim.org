@@ -58,7 +58,7 @@ The code script correctly presents `(2023)` to the left of the word "اسطوا�
 
 # rtlr - Solves Your RTL Problems
 
-This is where rtlr steps in. its main (and currently only) function, `str_rtl()`, wraps strings with the Unicode character `\u202B`, which tells R to handle everything in that string that comes after this character as RTL.[^2] it does so as a wrapper around `stringr::str_c()`.
+This is where rtlr steps in. Its main (and currently only) function, `str_rtl()`, wraps strings with the Unicode character `\u202B`, which tells R to handle everything in that string that comes after this character as RTL.[^2] It does so as a wrapper around `stringr::str_c()`.
 
 [^2]: For further reading on this, see: <https://unicode.org/reports/tr9/#Directional_Formatting_Characters>
 
