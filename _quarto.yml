@@ -2,7 +2,6 @@ project:
   type: website
 
 website:
-  title: "Matan Hakim - Policy Data Scientist"
   site-url: https://www.matanhakim.org
   description: "Matan Hakim's personal website"
   image: profile.jpg
@@ -10,6 +9,7 @@ website:
   twitter-card: true
   open-graph: true
   navbar:
+    title: "Matan Hakim - Policy Data Scientist"
     right:
       - text: "About"
         file: index.qmd

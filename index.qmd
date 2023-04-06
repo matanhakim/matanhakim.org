@@ -1,5 +1,5 @@
 ---
-title: "Matan Hakim"
+title: "Matan Hakim - Policy Data Scientist"
 image: profile.jpg
 about:
   template: jolla
