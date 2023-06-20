@@ -7,10 +7,13 @@ categories:
   - news
   - code
   - rtlr
+  - RWeekly Highlights
 image: "image.png"
 ---
 
 ![](image.png){fig-alt="Hex logo for rtlr, \"rtlr\" text with a right-pointing arrow surrounded by a hexagon" fig-align="center"}
+
+*(This blog post was chosen as a highlight for R Weekly [issue 2023-W15](https://rweekly.org/2023-W15.html))*
 
 Do you know anyone who speaks Arabic, Persian or Hebrew? Do you know any R professional who speaks any of these languages? Maybe **you are yourself** an R professional who speaks any of these languages and uses them in your R work?
 
