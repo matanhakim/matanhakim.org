@@ -30,6 +30,14 @@ title: "Matan Hakim - CV"
 
 [^1]: See this [TheMarker news article](https://www.themarker.com/labels/2021-05-09/ty-article-labels/0000017f-f88d-d47e-a37f-f9bdba270000)
 
+## Open Source contributions
+
+-   Author and maintainer of [rtlr](https://matanhakim.github.io/rtlr/), an R package for RTL languages
+
+-   [Feature development](https://github.com/sfirke/janitor/pull/542) in [janitor](https://sfirke.github.io/janitor/), an R package for examining and cleaning dirty data
+
+-   Proofreading the open-source books [R Packages (2e)](https://r-pkgs.org/) and [Building reproducible analytical pipelines with R](https://raps-with-r.dev/)
+
 # Academics
 
 -   Teacher Assistant, "Introduction to Social Research" (2021 - 2022), for Dr. Dana Zarhin (Senior Lecturer with tenure), Department of Sociology, University of Haifa
