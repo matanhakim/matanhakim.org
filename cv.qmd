@@ -36,7 +36,13 @@ title: "Matan Hakim - CV"
 
 -   [Feature development](https://github.com/sfirke/janitor/pull/542) in [janitor](https://sfirke.github.io/janitor/), an R package for examining and cleaning dirty data
 
--   Proofreading the open-source books [R Packages (2e)](https://r-pkgs.org/) and [Building reproducible analytical pipelines with R](https://raps-with-r.dev/)
+-   Proofreading contributions to the open-source books:
+
+    -   [R for Data Science (2e)](https://r4ds.hadley.nz/)
+
+    -   [R Packages (2e)](https://r-pkgs.org/)
+
+    -   [Building reproducible analytical pipelines with R](https://raps-with-r.dev/)
 
 # Academics
 
