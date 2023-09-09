@@ -21,7 +21,7 @@ out-width: "80%"
 
 It's hard to point on the specific moment where my passion for the NBA started. It might have been somewhere during the 1997-98 season, when I remember myself having a huge Michael Jordan poster hanging over my bed. I was in second grade, barely knowing what basketball even is, but I had to have MJ with me. It might have been during 8th grade, When my friend and I started playing NBA Live 2005 on our PCs, following that with backyard imitations of Kobe Bryant and Lebron James. It even might have been while watching the 2008 NBA Finals live (game started on 3AM Israel time, mind you), and being part of the amazing ["Anything's possible" moment](https://youtu.be/LnVy5ZEcbH0?si=x7IuS45pbWKLcD_Y) from Kevin Garnett. But I guess the moment the NBA really captured me was during the 2014-15 season, the season that featured rise of Steph Curry and the Golden Warriors, alongside the new era of NBA analytics.
 
-Since then, I am a regular follower of NBA content, specifically everything related to NBA data and analytics. For example, I'm a huge fan of the ["Thinking Basketball" Youtube Channel](https://www.youtube.com/@ThinkingBasketball) by Ben Taylor, who is a master of bringing data and context together. Additionally, as an Israeli and a Hebrew speaker, I regularly follow the ["7 Seconds or Less" Podcast](https://open.spotify.com/show/3K9f2f9ZpWEALL1gXNtMX1) (in Hebrew) by Yuval Oz and Oren Levy, who enjoy having discussions around evolving trends and shifts, rather than the latest "Woj Bomb". These conversations tend to revolve around many topics, but one of the latest themes I found most interesting is **NBA players' height**.
+Since then, I am a regular follower of NBA content, specifically everything related to NBA data and analytics. For example, I'm a huge fan of the ["Thinking Basketball" Youtube Channel](https://www.youtube.com/@ThinkingBasketball) by Ben Taylor, who is a master of bringing data and context together. Additionally, as an Israeli and a Hebrew speaker, I regularly follow the ["7 Seconds or Less" Podcast](https://open.spotify.com/show/3K9f2f9ZpWEALL1gXNtMX1) (in Hebrew) by Yuval Oz and Oren Levi, who enjoy having discussions around evolving trends and shifts, rather than the latest "Woj Bomb". These conversations tend to revolve around many topics, but one of the latest themes I found most interesting is **NBA players' height**.
 
 So, the question that guided me was *"what are the trends regarding NBA players' height over the years?"*. Specifically, I was interested in the **average** height (a measure of central tendency) and the **standard deviation** of height (a measure of spread), and their evolution over time. Finally, I thought it was proper to analyse **effective** height, meaning the height of the players playing on the court, rather than the height of players on a team. For example, let's compare Boban Marjanović and Trae Young. Marjanović, the tallest player in the 2022-23 NBA season standing at 7-3, played a total of 171 minutes for the Houston Rockets on that season. On the other hand, Young, standing at merely 6-1, played a total of 2,541 minutes for the Atlanta Hawks during the 2022-23 season - almost 15 times more minutes played than Marjanović. Obviously, we need to take these differences into account, and this is why **I weighted the different statistics by minutes played**.
 
@@ -72,9 +72,9 @@ read_season <- function(year) {
 After defining our function, let's map it over every season, starting from 1952.
 
 ```{r}
-# df_seasons_raw <- tibble(year = 1952:2023) |> 
-#   mutate(data = map(year, read_season)) |> 
-#   unnest(data)
+df_seasons_raw <- tibble(year = 1952:2023) |>
+  mutate(data = map(year, read_season)) |>
+  unnest(data)
 ```
 
 ### All players
@@ -100,23 +100,9 @@ read_players_letter <- function(letter) {
 Now, let's map this function over every letter (besides "x", a letter with no NBA players family names) to create our data set.
 
 ```{r}
-# letters_no_x <- letters[letters != "x"]
-# df_players_raw <- map(letters_no_x, read_players_letter) |> 
-#   list_rbind()
-```
-
-## Save raw data
-
-```{r}
-# write_rds(df_seasons_raw, "data/seasons.rds")
-# write_rds(df_players_raw, "data/players.rds")
-```
-
-## Read saved data
-
-```{r}
-df_seasons_raw <- read_rds("data/seasons.rds")
-df_players_raw <- read_rds("data/players.rds")
+letters_no_x <- letters[letters != "x"]
+df_players_raw <- map(letters_no_x, read_players_letter) |>
+  list_rbind()
 ```
 
 ## Manipulate data
