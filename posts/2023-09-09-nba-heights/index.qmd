@@ -1,5 +1,5 @@
 ---
-title: "Analyzing Height Trends in the NBA"
+title: "Height per Minute - Analyzing Height Trends in the NBA"
 subtitle: ""
 author: "Matan Hakim"
 date: "2023-09-09"
@@ -25,7 +25,7 @@ Since then, I am a regular follower of NBA content, specifically everything rela
 
 So, the question that guided me was *"what are the trends regarding NBA players' height over the years?"*. Specifically, I was interested in the **average** height (a measure of central tendency) and the **standard deviation** of height (a measure of spread), and their evolution over time. Finally, I thought it was proper to analyse **effective** height, meaning the height of the players playing on the court, rather than the height of players on a team. For example, let's compare Boban Marjanović and Trae Young. Marjanović, the tallest player in the 2022-23 NBA season standing at 7-3, played a total of 171 minutes for the Houston Rockets on that season. On the other hand, Young, standing at merely 6-1, played a total of 2,541 minutes for the Atlanta Hawks during the 2022-23 season - almost 15 times more minutes played than Marjanović. Obviously, we need to take these differences into account, and this is why **I weighted the different statistics by minutes played**.
 
-This blog post describes both the process data collection and manipulation, and the final visuals with some explanatory text. Now, you might be here for either (or both!) of these reasons: data analysis, or NBA. If you're not interested in R code involving web scraping, data manipulation and visualization, you can skip ahead to the [NBA players' height over the year](#sec-analysis) section.
+This blog post describes both the process data collection and manipulation with the R programming language, and the final visuals with some explanatory text. Now, you might be here for either (or both!) of these reasons: data analysis with R, or NBA. If you're not interested in R code involving web scraping, data manipulation and visualization, you can skip ahead to the [NBA players' height over the years](#sec-analysis) section.
 
 Let's dive right in!
 
