@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  site-url: https://www.matanhakim.org
+  # site-url: https://www.matanhakim.org
   description: "Matan Hakim's personal website"
   image: profile.jpg
   favicon: profile.jpg
@@ -32,5 +32,7 @@ format:
       light: flatly
       dark: darkly
     css: styles.css
+execute:
+  freeze: auto
 
 editor: visual
